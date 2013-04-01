@@ -12,8 +12,36 @@
 		0759E27216FC5D4200976E87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E27116FC5D4200976E87 /* main.m */; };
 		0759E27616FC5D4200976E87 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0759E27416FC5D4200976E87 /* Credits.rtf */; };
 		0759E27916FC5D4200976E87 /* IADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E27816FC5D4200976E87 /* IADocument.m */; };
-		0759E27C16FC5D4200976E87 /* IADocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0759E27A16FC5D4200976E87 /* IADocument.xib */; };
 		0759E27F16FC5D4300976E87 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0759E27D16FC5D4300976E87 /* MainMenu.xib */; };
+		0759E2B116FC7BEE00976E87 /* CPTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B016FC7BEE00976E87 /* CPTheme.m */; };
+		0759E2BA16FC833800976E87 /* CPColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B916FC833800976E87 /* CPColors.m */; };
+		0759E2C316FC883700976E87 /* CPShadows.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C216FC883700976E87 /* CPShadows.m */; };
+		0759E2C616FC884200976E87 /* CPGradients.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C516FC884200976E87 /* CPGradients.m */; };
+		0759E2C916FC885700976E87 /* CPImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C816FC885700976E87 /* CPImages.m */; };
+		0759E2CC16FC886900976E87 /* CPStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2CB16FC886800976E87 /* CPStrings.m */; };
+		07AF85DE16FCCCF000C25F76 /* CPThemeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85DD16FCCCF000C25F76 /* CPThemeItem.m */; };
+		07AF85FB16FD01AA00C25F76 /* BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85EA16FD01AA00C25F76 /* BFColorPickerPopover.m */; };
+		07AF85FC16FD01AA00C25F76 /* BFPopoverColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85EC16FD01AA00C25F76 /* BFPopoverColorWell.m */; };
+		07AF85FD16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85EF16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.m */; };
+		07AF85FE16FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85F116FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.m */; };
+		07AF85FF16FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85F316FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.m */; };
+		07AF860016FD01AA00C25F76 /* BFColorPickerPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85F616FD01AA00C25F76 /* BFColorPickerPopoverView.m */; };
+		07AF860116FD01AA00C25F76 /* BFColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85F816FD01AA00C25F76 /* BFColorPickerViewController.m */; };
+		07AF860216FD01AA00C25F76 /* BFIconTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85FA16FD01AA00C25F76 /* BFIconTabBar.m */; };
+		07AF86121701B5EF00C25F76 /* IAColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86101701B5EF00C25F76 /* IAColorsViewController.m */; };
+		07AF86131701B5EF00C25F76 /* IAColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86111701B5EF00C25F76 /* IAColorsViewController.xib */; };
+		07AF86181701BF7300C25F76 /* IAGradientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86161701BF7200C25F76 /* IAGradientsViewController.m */; };
+		07AF86191701BF7300C25F76 /* IAGradientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86171701BF7200C25F76 /* IAGradientsViewController.xib */; };
+		07AF861D1701BFBC00C25F76 /* IAImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF861B1701BFBC00C25F76 /* IAImagesViewController.m */; };
+		07AF861E1701BFBC00C25F76 /* IAImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF861C1701BFBC00C25F76 /* IAImagesViewController.xib */; };
+		07AF86241701DCFF00C25F76 /* ACTGradientEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86211701DCFF00C25F76 /* ACTGradientEditor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07AF86251701DCFF00C25F76 /* ACTGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86231701DCFF00C25F76 /* ACTGradientView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07AF86281701DD5000C25F76 /* NSColor+ChessboardColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86271701DD5000C25F76 /* NSColor+ChessboardColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07AF86331705E6AF00C25F76 /* IADocumentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86321705E6AF00C25F76 /* IADocumentWindowController.m */; };
+		07AF86351705E78900C25F76 /* IADocumentWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86341705E78900C25F76 /* IADocumentWindowController.xib */; };
+		07AF863A1705FD0600C25F76 /* IANewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86381705FD0600C25F76 /* IANewWindowController.m */; };
+		07AF863B1705FD0600C25F76 /* IANewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86391705FD0600C25F76 /* IANewWindowController.xib */; };
+		3E968E172FE249CB86E55B1B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55597DD1AF564BD9B12927EB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +57,61 @@
 		0759E27516FC5D4200976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0759E27716FC5D4200976E87 /* IADocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADocument.h; sourceTree = "<group>"; };
 		0759E27816FC5D4200976E87 /* IADocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADocument.m; sourceTree = "<group>"; };
-		0759E27B16FC5D4200976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IADocument.xib; sourceTree = "<group>"; };
 		0759E27E16FC5D4300976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0759E2AF16FC7BEE00976E87 /* CPTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTheme.h; sourceTree = "<group>"; };
+		0759E2B016FC7BEE00976E87 /* CPTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPTheme.m; sourceTree = "<group>"; };
+		0759E2B816FC833800976E87 /* CPColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPColors.h; sourceTree = "<group>"; };
+		0759E2B916FC833800976E87 /* CPColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPColors.m; sourceTree = "<group>"; };
+		0759E2C116FC883700976E87 /* CPShadows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPShadows.h; sourceTree = "<group>"; };
+		0759E2C216FC883700976E87 /* CPShadows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPShadows.m; sourceTree = "<group>"; };
+		0759E2C416FC884200976E87 /* CPGradients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPGradients.h; sourceTree = "<group>"; };
+		0759E2C516FC884200976E87 /* CPGradients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPGradients.m; sourceTree = "<group>"; };
+		0759E2C716FC885700976E87 /* CPImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPImages.h; sourceTree = "<group>"; };
+		0759E2C816FC885700976E87 /* CPImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPImages.m; sourceTree = "<group>"; };
+		0759E2CA16FC886800976E87 /* CPStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStrings.h; sourceTree = "<group>"; };
+		0759E2CB16FC886800976E87 /* CPStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPStrings.m; sourceTree = "<group>"; };
+		07AF85DC16FCCCF000C25F76 /* CPThemeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPThemeItem.h; sourceTree = "<group>"; };
+		07AF85DD16FCCCF000C25F76 /* CPThemeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPThemeItem.m; sourceTree = "<group>"; };
+		07AF85E916FD01AA00C25F76 /* BFColorPickerPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFColorPickerPopover.h; sourceTree = "<group>"; };
+		07AF85EA16FD01AA00C25F76 /* BFColorPickerPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFColorPickerPopover.m; sourceTree = "<group>"; };
+		07AF85EB16FD01AA00C25F76 /* BFPopoverColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPopoverColorWell.h; sourceTree = "<group>"; };
+		07AF85EC16FD01AA00C25F76 /* BFPopoverColorWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPopoverColorWell.m; sourceTree = "<group>"; };
+		07AF85EE16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		07AF85EF16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		07AF85F016FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColorPanel+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		07AF85F116FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColorPanel+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		07AF85F216FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColorWell+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		07AF85F316FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColorWell+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		07AF85F516FD01AA00C25F76 /* BFColorPickerPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFColorPickerPopoverView.h; sourceTree = "<group>"; };
+		07AF85F616FD01AA00C25F76 /* BFColorPickerPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFColorPickerPopoverView.m; sourceTree = "<group>"; };
+		07AF85F716FD01AA00C25F76 /* BFColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFColorPickerViewController.h; sourceTree = "<group>"; };
+		07AF85F816FD01AA00C25F76 /* BFColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFColorPickerViewController.m; sourceTree = "<group>"; };
+		07AF85F916FD01AA00C25F76 /* BFIconTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFIconTabBar.h; sourceTree = "<group>"; };
+		07AF85FA16FD01AA00C25F76 /* BFIconTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFIconTabBar.m; sourceTree = "<group>"; };
+		07AF860F1701B5EF00C25F76 /* IAColorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAColorsViewController.h; sourceTree = "<group>"; };
+		07AF86101701B5EF00C25F76 /* IAColorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAColorsViewController.m; sourceTree = "<group>"; };
+		07AF86111701B5EF00C25F76 /* IAColorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAColorsViewController.xib; sourceTree = "<group>"; };
+		07AF86141701B9D700C25F76 /* IATabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IATabViewController.h; sourceTree = "<group>"; };
+		07AF86151701BF7200C25F76 /* IAGradientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAGradientsViewController.h; sourceTree = "<group>"; };
+		07AF86161701BF7200C25F76 /* IAGradientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAGradientsViewController.m; sourceTree = "<group>"; };
+		07AF86171701BF7200C25F76 /* IAGradientsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAGradientsViewController.xib; sourceTree = "<group>"; };
+		07AF861A1701BFBC00C25F76 /* IAImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAImagesViewController.h; sourceTree = "<group>"; };
+		07AF861B1701BFBC00C25F76 /* IAImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAImagesViewController.m; sourceTree = "<group>"; };
+		07AF861C1701BFBC00C25F76 /* IAImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAImagesViewController.xib; sourceTree = "<group>"; };
+		07AF86201701DCFF00C25F76 /* ACTGradientEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTGradientEditor.h; sourceTree = "<group>"; };
+		07AF86211701DCFF00C25F76 /* ACTGradientEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTGradientEditor.m; sourceTree = "<group>"; };
+		07AF86221701DCFF00C25F76 /* ACTGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTGradientView.h; sourceTree = "<group>"; };
+		07AF86231701DCFF00C25F76 /* ACTGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTGradientView.m; sourceTree = "<group>"; };
+		07AF86261701DD5000C25F76 /* NSColor+ChessboardColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+ChessboardColor.h"; sourceTree = "<group>"; };
+		07AF86271701DD5000C25F76 /* NSColor+ChessboardColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+ChessboardColor.m"; sourceTree = "<group>"; };
+		07AF86311705E6AF00C25F76 /* IADocumentWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADocumentWindowController.h; sourceTree = "<group>"; };
+		07AF86321705E6AF00C25F76 /* IADocumentWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADocumentWindowController.m; sourceTree = "<group>"; };
+		07AF86341705E78900C25F76 /* IADocumentWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IADocumentWindowController.xib; sourceTree = "<group>"; };
+		07AF86371705FD0600C25F76 /* IANewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IANewWindowController.h; sourceTree = "<group>"; };
+		07AF86381705FD0600C25F76 /* IANewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IANewWindowController.m; sourceTree = "<group>"; };
+		07AF86391705FD0600C25F76 /* IANewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IANewWindowController.xib; sourceTree = "<group>"; };
+		15A03061464F4F4595A49EBF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		55597DD1AF564BD9B12927EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0759E26616FC5D4200976E87 /* Cocoa.framework in Frameworks */,
+				3E968E172FE249CB86E55B1B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,9 +130,11 @@
 		0759E25916FC5D4200976E87 = {
 			isa = PBXGroup;
 			children = (
+				0759E2AE16FC7B5E00976E87 /* Theme */,
 				0759E26B16FC5D4200976E87 /* Themes */,
 				0759E26416FC5D4200976E87 /* Frameworks */,
 				0759E26316FC5D4200976E87 /* Products */,
+				15A03061464F4F4595A49EBF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +151,7 @@
 			children = (
 				0759E26516FC5D4200976E87 /* Cocoa.framework */,
 				0759E26716FC5D4200976E87 /* Other Frameworks */,
+				55597DD1AF564BD9B12927EB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,9 +169,13 @@
 		0759E26B16FC5D4200976E87 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				07AF86361705FCC500C25F76 /* Create Window */,
+				07AF86301705E65E00C25F76 /* Document Window */,
+				07AF861F1701DCEA00C25F76 /* Gradients */,
+				07AF85E816FD01AA00C25F76 /* BFColorPickerPopover */,
+				07AF86031701B49000C25F76 /* Tabs */,
 				0759E27716FC5D4200976E87 /* IADocument.h */,
 				0759E27816FC5D4200976E87 /* IADocument.m */,
-				0759E27A16FC5D4200976E87 /* IADocument.xib */,
 				0759E27D16FC5D4300976E87 /* MainMenu.xib */,
 				0759E26C16FC5D4200976E87 /* Supporting Files */,
 			);
@@ -105,6 +194,117 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0759E2AE16FC7B5E00976E87 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0759E2AF16FC7BEE00976E87 /* CPTheme.h */,
+				0759E2B016FC7BEE00976E87 /* CPTheme.m */,
+				0759E2B816FC833800976E87 /* CPColors.h */,
+				0759E2B916FC833800976E87 /* CPColors.m */,
+				0759E2C416FC884200976E87 /* CPGradients.h */,
+				0759E2C516FC884200976E87 /* CPGradients.m */,
+				0759E2C116FC883700976E87 /* CPShadows.h */,
+				0759E2C216FC883700976E87 /* CPShadows.m */,
+				0759E2C716FC885700976E87 /* CPImages.h */,
+				0759E2C816FC885700976E87 /* CPImages.m */,
+				0759E2CA16FC886800976E87 /* CPStrings.h */,
+				0759E2CB16FC886800976E87 /* CPStrings.m */,
+				07AF85DC16FCCCF000C25F76 /* CPThemeItem.h */,
+				07AF85DD16FCCCF000C25F76 /* CPThemeItem.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		07AF85E816FD01AA00C25F76 /* BFColorPickerPopover */ = {
+			isa = PBXGroup;
+			children = (
+				07AF85E916FD01AA00C25F76 /* BFColorPickerPopover.h */,
+				07AF85EA16FD01AA00C25F76 /* BFColorPickerPopover.m */,
+				07AF85EB16FD01AA00C25F76 /* BFPopoverColorWell.h */,
+				07AF85EC16FD01AA00C25F76 /* BFPopoverColorWell.m */,
+				07AF85ED16FD01AA00C25F76 /* Extensions */,
+				07AF85F416FD01AA00C25F76 /* Helper Classes */,
+			);
+			path = BFColorPickerPopover;
+			sourceTree = "<group>";
+		};
+		07AF85ED16FD01AA00C25F76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07AF85EE16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.h */,
+				07AF85EF16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.m */,
+				07AF85F016FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.h */,
+				07AF85F116FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.m */,
+				07AF85F216FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.h */,
+				07AF85F316FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07AF85F416FD01AA00C25F76 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07AF85F516FD01AA00C25F76 /* BFColorPickerPopoverView.h */,
+				07AF85F616FD01AA00C25F76 /* BFColorPickerPopoverView.m */,
+				07AF85F716FD01AA00C25F76 /* BFColorPickerViewController.h */,
+				07AF85F816FD01AA00C25F76 /* BFColorPickerViewController.m */,
+				07AF85F916FD01AA00C25F76 /* BFIconTabBar.h */,
+				07AF85FA16FD01AA00C25F76 /* BFIconTabBar.m */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		07AF86031701B49000C25F76 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				07AF860F1701B5EF00C25F76 /* IAColorsViewController.h */,
+				07AF86101701B5EF00C25F76 /* IAColorsViewController.m */,
+				07AF86111701B5EF00C25F76 /* IAColorsViewController.xib */,
+				07AF86141701B9D700C25F76 /* IATabViewController.h */,
+				07AF86151701BF7200C25F76 /* IAGradientsViewController.h */,
+				07AF86161701BF7200C25F76 /* IAGradientsViewController.m */,
+				07AF86171701BF7200C25F76 /* IAGradientsViewController.xib */,
+				07AF861A1701BFBC00C25F76 /* IAImagesViewController.h */,
+				07AF861B1701BFBC00C25F76 /* IAImagesViewController.m */,
+				07AF861C1701BFBC00C25F76 /* IAImagesViewController.xib */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		07AF861F1701DCEA00C25F76 /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				07AF86201701DCFF00C25F76 /* ACTGradientEditor.h */,
+				07AF86211701DCFF00C25F76 /* ACTGradientEditor.m */,
+				07AF86221701DCFF00C25F76 /* ACTGradientView.h */,
+				07AF86231701DCFF00C25F76 /* ACTGradientView.m */,
+				07AF86261701DD5000C25F76 /* NSColor+ChessboardColor.h */,
+				07AF86271701DD5000C25F76 /* NSColor+ChessboardColor.m */,
+			);
+			path = Gradients;
+			sourceTree = "<group>";
+		};
+		07AF86301705E65E00C25F76 /* Document Window */ = {
+			isa = PBXGroup;
+			children = (
+				07AF86341705E78900C25F76 /* IADocumentWindowController.xib */,
+				07AF86311705E6AF00C25F76 /* IADocumentWindowController.h */,
+				07AF86321705E6AF00C25F76 /* IADocumentWindowController.m */,
+			);
+			name = "Document Window";
+			path = Window;
+			sourceTree = "<group>";
+		};
+		07AF86361705FCC500C25F76 /* Create Window */ = {
+			isa = PBXGroup;
+			children = (
+				07AF86371705FD0600C25F76 /* IANewWindowController.h */,
+				07AF86381705FD0600C25F76 /* IANewWindowController.m */,
+				07AF86391705FD0600C25F76 /* IANewWindowController.xib */,
+			);
+			path = "Create Window";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +315,7 @@
 				0759E25E16FC5D4200976E87 /* Sources */,
 				0759E25F16FC5D4200976E87 /* Frameworks */,
 				0759E26016FC5D4200976E87 /* Resources */,
+				A132768AA8C24F1BADDA0BB4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,12 +360,33 @@
 			files = (
 				0759E27016FC5D4200976E87 /* InfoPlist.strings in Resources */,
 				0759E27616FC5D4200976E87 /* Credits.rtf in Resources */,
-				0759E27C16FC5D4200976E87 /* IADocument.xib in Resources */,
 				0759E27F16FC5D4300976E87 /* MainMenu.xib in Resources */,
+				07AF86131701B5EF00C25F76 /* IAColorsViewController.xib in Resources */,
+				07AF86191701BF7300C25F76 /* IAGradientsViewController.xib in Resources */,
+				07AF861E1701BFBC00C25F76 /* IAImagesViewController.xib in Resources */,
+				07AF86351705E78900C25F76 /* IADocumentWindowController.xib in Resources */,
+				07AF863B1705FD0600C25F76 /* IANewWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A132768AA8C24F1BADDA0BB4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0759E25E16FC5D4200976E87 /* Sources */ = {
@@ -173,6 +395,29 @@
 			files = (
 				0759E27216FC5D4200976E87 /* main.m in Sources */,
 				0759E27916FC5D4200976E87 /* IADocument.m in Sources */,
+				0759E2B116FC7BEE00976E87 /* CPTheme.m in Sources */,
+				0759E2BA16FC833800976E87 /* CPColors.m in Sources */,
+				0759E2C316FC883700976E87 /* CPShadows.m in Sources */,
+				0759E2C616FC884200976E87 /* CPGradients.m in Sources */,
+				0759E2C916FC885700976E87 /* CPImages.m in Sources */,
+				0759E2CC16FC886900976E87 /* CPStrings.m in Sources */,
+				07AF85DE16FCCCF000C25F76 /* CPThemeItem.m in Sources */,
+				07AF85FB16FD01AA00C25F76 /* BFColorPickerPopover.m in Sources */,
+				07AF85FC16FD01AA00C25F76 /* BFPopoverColorWell.m in Sources */,
+				07AF85FD16FD01AA00C25F76 /* NSColor+BFColorPickerPopover.m in Sources */,
+				07AF85FE16FD01AA00C25F76 /* NSColorPanel+BFColorPickerPopover.m in Sources */,
+				07AF85FF16FD01AA00C25F76 /* NSColorWell+BFColorPickerPopover.m in Sources */,
+				07AF860016FD01AA00C25F76 /* BFColorPickerPopoverView.m in Sources */,
+				07AF860116FD01AA00C25F76 /* BFColorPickerViewController.m in Sources */,
+				07AF860216FD01AA00C25F76 /* BFIconTabBar.m in Sources */,
+				07AF86121701B5EF00C25F76 /* IAColorsViewController.m in Sources */,
+				07AF86181701BF7300C25F76 /* IAGradientsViewController.m in Sources */,
+				07AF861D1701BFBC00C25F76 /* IAImagesViewController.m in Sources */,
+				07AF86241701DCFF00C25F76 /* ACTGradientEditor.m in Sources */,
+				07AF86251701DCFF00C25F76 /* ACTGradientView.m in Sources */,
+				07AF86281701DD5000C25F76 /* NSColor+ChessboardColor.m in Sources */,
+				07AF86331705E6AF00C25F76 /* IADocumentWindowController.m in Sources */,
+				07AF863A1705FD0600C25F76 /* IANewWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,14 +438,6 @@
 				0759E27516FC5D4200976E87 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		0759E27A16FC5D4200976E87 /* IADocument.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0759E27B16FC5D4200976E87 /* en */,
-			);
-			name = IADocument.xib;
 			sourceTree = "<group>";
 		};
 		0759E27D16FC5D4300976E87 /* MainMenu.xib */ = {
@@ -275,6 +512,7 @@
 		};
 		0759E28316FC5D4300976E87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15A03061464F4F4595A49EBF /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -287,6 +525,7 @@
 		};
 		0759E28416FC5D4300976E87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15A03061464F4F4595A49EBF /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -316,6 +555,7 @@
 				0759E28416FC5D4300976E87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

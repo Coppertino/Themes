@@ -8,6 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface IADocument : NSDocument
+#import "IATabViewController.h"
+#import "CPTheme.h"
+
+extern NSString *const kMASPreferencesWindowControllerDidChangeViewNotification;
+
+@interface IADocument : NSDocument <NSToolbarDelegate>
+
+@property (nonatomic, strong) CPTheme *remoteTheme;
+@property (nonatomic, strong) NSDictionaryController *contentController;
+@property (nonatomic, strong) NSDictionary *classes;
 
 @end

@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0759E29216FC7B3A00976E87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E29116FC7B3A00976E87 /* Cocoa.framework */; };
+		0759E29C16FC7B3A00976E87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0759E29A16FC7B3A00976E87 /* InfoPlist.strings */; };
+		0759E29E16FC7B3A00976E87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E29D16FC7B3A00976E87 /* main.m */; };
+		0759E2A216FC7B3A00976E87 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0759E2A016FC7B3A00976E87 /* Credits.rtf */; };
+		0759E2A516FC7B3A00976E87 /* COPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2A416FC7B3A00976E87 /* COPAppDelegate.m */; };
+		0759E2A816FC7B3B00976E87 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0759E2A616FC7B3B00976E87 /* MainMenu.xib */; };
+		0759E2B416FC7D8D00976E87 /* CPTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B316FC7D8D00976E87 /* CPTheme.m */; };
+		0759E2B716FC7DD100976E87 /* COPDefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B616FC7DD100976E87 /* COPDefaultTheme.m */; };
+		0759E2F916FC89EE00976E87 /* CPColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2F016FC89EA00976E87 /* CPColors.m */; };
+		0759E2FA16FC89EE00976E87 /* CPGradients.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2F216FC89EB00976E87 /* CPGradients.m */; };
+		0759E2FB16FC89EE00976E87 /* CPImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2F416FC89EC00976E87 /* CPImages.m */; };
+		0759E2FC16FC89EE00976E87 /* CPShadows.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2F616FC89EC00976E87 /* CPShadows.m */; };
+		0759E2FD16FC89EE00976E87 /* CPStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2F816FC89EE00976E87 /* CPStrings.m */; };
+		0759E30016FC941100976E87 /* COPView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2FF16FC941100976E87 /* COPView1.m */; };
+		07AF85E116FCCD1000C25F76 /* CPThemeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85E016FCCD1000C25F76 /* CPThemeItem.m */; };
+		07AF85E416FCCE0200C25F76 /* COPView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85E316FCCE0100C25F76 /* COPView2.m */; };
+		07AF86451709BEAF00C25F76 /* TestTheme.cptheme in Sources */ = {isa = PBXBuildFile; fileRef = 07AF863C1709BB9500C25F76 /* TestTheme.cptheme */; };
+		07AF86491709CF3900C25F76 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86481709CF3900C25F76 /* new.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		07AF863E1709BBA100C25F76 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.cptheme";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).m",
+			);
+			script = "/Users/acrist/Library/Developer/Xcode/DerivedData/Themes-eqnxzquqgdtqatfphapkfbfwzexf/Build/Products/Debug/Themes.app/Contents/MacOS/Themes -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\"\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		0759E28E16FC7B3A00976E87 /* ThemedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0759E29116FC7B3A00976E87 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0759E29416FC7B3A00976E87 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0759E29516FC7B3A00976E87 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0759E29616FC7B3A00976E87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0759E29916FC7B3A00976E87 /* ThemedApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThemedApp-Info.plist"; sourceTree = "<group>"; };
+		0759E29B16FC7B3A00976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0759E29D16FC7B3A00976E87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0759E29F16FC7B3A00976E87 /* ThemedApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThemedApp-Prefix.pch"; sourceTree = "<group>"; };
+		0759E2A116FC7B3A00976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0759E2A316FC7B3A00976E87 /* COPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COPAppDelegate.h; sourceTree = "<group>"; };
+		0759E2A416FC7B3A00976E87 /* COPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COPAppDelegate.m; sourceTree = "<group>"; };
+		0759E2A716FC7B3B00976E87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0759E2B216FC7D8D00976E87 /* CPTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPTheme.h; path = ../../Theme/CPTheme.h; sourceTree = "<group>"; };
+		0759E2B316FC7D8D00976E87 /* CPTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPTheme.m; path = ../../Theme/CPTheme.m; sourceTree = "<group>"; };
+		0759E2B516FC7DD100976E87 /* COPDefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPDefaultTheme.h; sourceTree = "<group>"; };
+		0759E2B616FC7DD100976E87 /* COPDefaultTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPDefaultTheme.m; sourceTree = "<group>"; };
+		0759E2BB16FC83AF00976E87 /* COPDefaultColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPDefaultColors.h; sourceTree = "<group>"; };
+		0759E2BC16FC83AF00976E87 /* COPDefaultColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPDefaultColors.m; sourceTree = "<group>"; };
+		0759E2EF16FC89EA00976E87 /* CPColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPColors.h; path = ../../Theme/CPColors.h; sourceTree = "<group>"; };
+		0759E2F016FC89EA00976E87 /* CPColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPColors.m; path = ../../Theme/CPColors.m; sourceTree = "<group>"; };
+		0759E2F116FC89EA00976E87 /* CPGradients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPGradients.h; path = ../../Theme/CPGradients.h; sourceTree = "<group>"; };
+		0759E2F216FC89EB00976E87 /* CPGradients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPGradients.m; path = ../../Theme/CPGradients.m; sourceTree = "<group>"; };
+		0759E2F316FC89EB00976E87 /* CPImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPImages.h; path = ../../Theme/CPImages.h; sourceTree = "<group>"; };
+		0759E2F416FC89EC00976E87 /* CPImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPImages.m; path = ../../Theme/CPImages.m; sourceTree = "<group>"; };
+		0759E2F516FC89EC00976E87 /* CPShadows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPShadows.h; path = ../../Theme/CPShadows.h; sourceTree = "<group>"; };
+		0759E2F616FC89EC00976E87 /* CPShadows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPShadows.m; path = ../../Theme/CPShadows.m; sourceTree = "<group>"; };
+		0759E2F716FC89EE00976E87 /* CPStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPStrings.h; path = ../../Theme/CPStrings.h; sourceTree = "<group>"; };
+		0759E2F816FC89EE00976E87 /* CPStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPStrings.m; path = ../../Theme/CPStrings.m; sourceTree = "<group>"; };
+		0759E2FE16FC941100976E87 /* COPView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPView1.h; sourceTree = "<group>"; };
+		0759E2FF16FC941100976E87 /* COPView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPView1.m; sourceTree = "<group>"; };
+		0759E30116FC9B4900976E87 /* COPDefaultColors_Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COPDefaultColors_Custom.h; path = ThemedApp/COPDefaultColors_Custom.h; sourceTree = "<group>"; };
+		0759E30216FC9B4900976E87 /* COPDefaultColors_Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COPDefaultColors_Custom.m; path = ThemedApp/COPDefaultColors_Custom.m; sourceTree = "<group>"; };
+		07AF85DF16FCCD1000C25F76 /* CPThemeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPThemeItem.h; path = ../../Theme/CPThemeItem.h; sourceTree = "<group>"; };
+		07AF85E016FCCD1000C25F76 /* CPThemeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPThemeItem.m; path = ../../Theme/CPThemeItem.m; sourceTree = "<group>"; };
+		07AF85E216FCCE0100C25F76 /* COPView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPView2.h; sourceTree = "<group>"; };
+		07AF85E316FCCE0100C25F76 /* COPView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPView2.m; sourceTree = "<group>"; };
+		07AF85E516FCCE4A00C25F76 /* COPDefaultGradients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPDefaultGradients.h; sourceTree = "<group>"; };
+		07AF85E616FCCE4A00C25F76 /* COPDefaultGradients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPDefaultGradients.m; sourceTree = "<group>"; };
+		07AF86291701F59700C25F76 /* COPDefaultImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPDefaultImages.h; sourceTree = "<group>"; };
+		07AF862A1701F59700C25F76 /* COPDefaultImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPDefaultImages.m; sourceTree = "<group>"; };
+		07AF863C1709BB9500C25F76 /* TestTheme.cptheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestTheme.cptheme; sourceTree = "<group>"; };
+		07AF86481709CF3900C25F76 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0759E28B16FC7B3A00976E87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0759E29216FC7B3A00976E87 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0759E28516FC7B3A00976E87 = {
+			isa = PBXGroup;
+			children = (
+				0759E30116FC9B4900976E87 /* COPDefaultColors_Custom.h */,
+				0759E30216FC9B4900976E87 /* COPDefaultColors_Custom.m */,
+				0759E29716FC7B3A00976E87 /* ThemedApp */,
+				0759E29016FC7B3A00976E87 /* Frameworks */,
+				0759E28F16FC7B3A00976E87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0759E28F16FC7B3A00976E87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0759E28E16FC7B3A00976E87 /* ThemedApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0759E29016FC7B3A00976E87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0759E29116FC7B3A00976E87 /* Cocoa.framework */,
+				0759E29316FC7B3A00976E87 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0759E29316FC7B3A00976E87 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0759E29416FC7B3A00976E87 /* AppKit.framework */,
+				0759E29516FC7B3A00976E87 /* CoreData.framework */,
+				0759E29616FC7B3A00976E87 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0759E29716FC7B3A00976E87 /* ThemedApp */ = {
+			isa = PBXGroup;
+			children = (
+				07AF863C1709BB9500C25F76 /* TestTheme.cptheme */,
+				07AF862C1703596F00C25F76 /* Themes */,
+				0759E2A316FC7B3A00976E87 /* COPAppDelegate.h */,
+				0759E2A416FC7B3A00976E87 /* COPAppDelegate.m */,
+				0759E2A616FC7B3B00976E87 /* MainMenu.xib */,
+				0759E29816FC7B3A00976E87 /* Supporting Files */,
+				0759E2B516FC7DD100976E87 /* COPDefaultTheme.h */,
+				0759E2B616FC7DD100976E87 /* COPDefaultTheme.m */,
+				0759E2BB16FC83AF00976E87 /* COPDefaultColors.h */,
+				0759E2BC16FC83AF00976E87 /* COPDefaultColors.m */,
+				0759E2FE16FC941100976E87 /* COPView1.h */,
+				0759E2FF16FC941100976E87 /* COPView1.m */,
+				07AF85E216FCCE0100C25F76 /* COPView2.h */,
+				07AF85E316FCCE0100C25F76 /* COPView2.m */,
+				07AF85E516FCCE4A00C25F76 /* COPDefaultGradients.h */,
+				07AF85E616FCCE4A00C25F76 /* COPDefaultGradients.m */,
+				07AF86291701F59700C25F76 /* COPDefaultImages.h */,
+				07AF862A1701F59700C25F76 /* COPDefaultImages.m */,
+			);
+			path = ThemedApp;
+			sourceTree = "<group>";
+		};
+		0759E29816FC7B3A00976E87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07AF86481709CF3900C25F76 /* new.png */,
+				0759E29916FC7B3A00976E87 /* ThemedApp-Info.plist */,
+				0759E29A16FC7B3A00976E87 /* InfoPlist.strings */,
+				0759E29D16FC7B3A00976E87 /* main.m */,
+				0759E29F16FC7B3A00976E87 /* ThemedApp-Prefix.pch */,
+				0759E2A016FC7B3A00976E87 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07AF862C1703596F00C25F76 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				07AF85DF16FCCD1000C25F76 /* CPThemeItem.h */,
+				07AF85E016FCCD1000C25F76 /* CPThemeItem.m */,
+				0759E2EF16FC89EA00976E87 /* CPColors.h */,
+				0759E2F016FC89EA00976E87 /* CPColors.m */,
+				0759E2F116FC89EA00976E87 /* CPGradients.h */,
+				0759E2F216FC89EB00976E87 /* CPGradients.m */,
+				0759E2F316FC89EB00976E87 /* CPImages.h */,
+				0759E2F416FC89EC00976E87 /* CPImages.m */,
+				0759E2F516FC89EC00976E87 /* CPShadows.h */,
+				0759E2F616FC89EC00976E87 /* CPShadows.m */,
+				0759E2F716FC89EE00976E87 /* CPStrings.h */,
+				0759E2F816FC89EE00976E87 /* CPStrings.m */,
+				0759E2B216FC7D8D00976E87 /* CPTheme.h */,
+				0759E2B316FC7D8D00976E87 /* CPTheme.m */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0759E28D16FC7B3A00976E87 /* ThemedApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0759E2AB16FC7B3B00976E87 /* Build configuration list for PBXNativeTarget "ThemedApp" */;
+			buildPhases = (
+				0759E28A16FC7B3A00976E87 /* Sources */,
+				0759E28B16FC7B3A00976E87 /* Frameworks */,
+				0759E28C16FC7B3A00976E87 /* Resources */,
+				07AF86471709CB7300C25F76 /* ShellScript */,
+			);
+			buildRules = (
+				07AF863E1709BBA100C25F76 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = ThemedApp;
+			productName = ThemedApp;
+			productReference = 0759E28E16FC7B3A00976E87 /* ThemedApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0759E28616FC7B3A00976E87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = COP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Coppertino Inc.";
+			};
+			buildConfigurationList = 0759E28916FC7B3A00976E87 /* Build configuration list for PBXProject "ThemedApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0759E28516FC7B3A00976E87;
+			productRefGroup = 0759E28F16FC7B3A00976E87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0759E28D16FC7B3A00976E87 /* ThemedApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0759E28C16FC7B3A00976E87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0759E29C16FC7B3A00976E87 /* InfoPlist.strings in Resources */,
+				0759E2A216FC7B3A00976E87 /* Credits.rtf in Resources */,
+				0759E2A816FC7B3B00976E87 /* MainMenu.xib in Resources */,
+				07AF86491709CF3900C25F76 /* new.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07AF86471709CB7300C25F76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "for i in $(ls -1 $DERIVED_FILES_DIR |grep .tiff); do\ncp ${DERIVED_FILES_DIR}/$i $BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Contents/Resources/\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0759E28A16FC7B3A00976E87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0759E29E16FC7B3A00976E87 /* main.m in Sources */,
+				0759E2A516FC7B3A00976E87 /* COPAppDelegate.m in Sources */,
+				0759E2B416FC7D8D00976E87 /* CPTheme.m in Sources */,
+				0759E2B716FC7DD100976E87 /* COPDefaultTheme.m in Sources */,
+				0759E2F916FC89EE00976E87 /* CPColors.m in Sources */,
+				0759E2FA16FC89EE00976E87 /* CPGradients.m in Sources */,
+				0759E2FB16FC89EE00976E87 /* CPImages.m in Sources */,
+				0759E2FC16FC89EE00976E87 /* CPShadows.m in Sources */,
+				0759E2FD16FC89EE00976E87 /* CPStrings.m in Sources */,
+				0759E30016FC941100976E87 /* COPView1.m in Sources */,
+				07AF85E116FCCD1000C25F76 /* CPThemeItem.m in Sources */,
+				07AF85E416FCCE0200C25F76 /* COPView2.m in Sources */,
+				07AF86451709BEAF00C25F76 /* TestTheme.cptheme in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0759E29A16FC7B3A00976E87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0759E29B16FC7B3A00976E87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0759E2A016FC7B3A00976E87 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0759E2A116FC7B3A00976E87 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0759E2A616FC7B3B00976E87 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0759E2A716FC7B3B00976E87 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0759E2A916FC7B3B00976E87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0759E2AA16FC7B3B00976E87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0759E2AC16FC7B3B00976E87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThemedApp/ThemedApp-Prefix.pch";
+				INFOPLIST_FILE = "ThemedApp/ThemedApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0759E2AD16FC7B3B00976E87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThemedApp/ThemedApp-Prefix.pch";
+				INFOPLIST_FILE = "ThemedApp/ThemedApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0759E28916FC7B3A00976E87 /* Build configuration list for PBXProject "ThemedApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0759E2A916FC7B3B00976E87 /* Debug */,
+				0759E2AA16FC7B3B00976E87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0759E2AB16FC7B3B00976E87 /* Build configuration list for PBXNativeTarget "ThemedApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0759E2AC16FC7B3B00976E87 /* Debug */,
+				0759E2AD16FC7B3B00976E87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0759E28616FC7B3A00976E87 /* Project object */;
+}
