@@ -110,7 +110,6 @@
 		07AF86371705FD0600C25F76 /* IANewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IANewWindowController.h; sourceTree = "<group>"; };
 		07AF86381705FD0600C25F76 /* IANewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IANewWindowController.m; sourceTree = "<group>"; };
 		07AF86391705FD0600C25F76 /* IANewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IANewWindowController.xib; sourceTree = "<group>"; };
-		15A03061464F4F4595A49EBF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		55597DD1AF564BD9B12927EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,7 +133,6 @@
 				0759E26B16FC5D4200976E87 /* Themes */,
 				0759E26416FC5D4200976E87 /* Frameworks */,
 				0759E26316FC5D4200976E87 /* Products */,
-				15A03061464F4F4595A49EBF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -512,7 +510,6 @@
 		};
 		0759E28316FC5D4300976E87 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15A03061464F4F4595A49EBF /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -525,7 +522,6 @@
 		};
 		0759E28416FC5D4300976E87 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15A03061464F4F4595A49EBF /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
