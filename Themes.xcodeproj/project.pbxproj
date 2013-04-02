@@ -41,8 +41,31 @@
 		07AF86351705E78900C25F76 /* IADocumentWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86341705E78900C25F76 /* IADocumentWindowController.xib */; };
 		07AF863A1705FD0600C25F76 /* IANewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF86381705FD0600C25F76 /* IANewWindowController.m */; };
 		07AF863B1705FD0600C25F76 /* IANewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF86391705FD0600C25F76 /* IANewWindowController.xib */; };
+		07AF8650170AF56E00C25F76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AF864F170AF56E00C25F76 /* Foundation.framework */; };
+		07AF8653170AF56F00C25F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF8652170AF56F00C25F76 /* main.m */; };
+		07AF865B170AF65A00C25F76 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E26516FC5D4200976E87 /* Cocoa.framework */; };
+		07AF865C170AF66100C25F76 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759E26816FC5D4200976E87 /* AppKit.framework */; };
+		07AF865D170AF67900C25F76 /* CPTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B016FC7BEE00976E87 /* CPTheme.m */; };
+		07AF865E170AF67B00C25F76 /* CPColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2B916FC833800976E87 /* CPColors.m */; };
+		07AF865F170AF67E00C25F76 /* CPGradients.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C516FC884200976E87 /* CPGradients.m */; };
+		07AF8660170AF68200C25F76 /* CPShadows.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C216FC883700976E87 /* CPShadows.m */; };
+		07AF8661170AF68500C25F76 /* CPImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C816FC885700976E87 /* CPImages.m */; };
+		07AF8662170AF68700C25F76 /* CPStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2CB16FC886800976E87 /* CPStrings.m */; };
+		07AF8663170AF68A00C25F76 /* CPThemeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85DD16FCCCF000C25F76 /* CPThemeItem.m */; };
 		3E968E172FE249CB86E55B1B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55597DD1AF564BD9B12927EB /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07AF864C170AF56E00C25F76 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0759E26216FC5D4200976E87 /* Themes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +133,10 @@
 		07AF86371705FD0600C25F76 /* IANewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IANewWindowController.h; sourceTree = "<group>"; };
 		07AF86381705FD0600C25F76 /* IANewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IANewWindowController.m; sourceTree = "<group>"; };
 		07AF86391705FD0600C25F76 /* IANewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IANewWindowController.xib; sourceTree = "<group>"; };
+		07AF864E170AF56E00C25F76 /* themegen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = themegen; sourceTree = BUILT_PRODUCTS_DIR; };
+		07AF864F170AF56E00C25F76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07AF8652170AF56F00C25F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07AF8666170B04F600C25F76 /* themegen.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = themegen.rb; sourceTree = "<group>"; };
 		55597DD1AF564BD9B12927EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +150,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07AF864B170AF56E00C25F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AF8650170AF56E00C25F76 /* Foundation.framework in Frameworks */,
+				07AF865B170AF65A00C25F76 /* Cocoa.framework in Frameworks */,
+				07AF865C170AF66100C25F76 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +168,7 @@
 			children = (
 				0759E2AE16FC7B5E00976E87 /* Theme */,
 				0759E26B16FC5D4200976E87 /* Themes */,
+				07AF8651170AF56E00C25F76 /* themegen */,
 				0759E26416FC5D4200976E87 /* Frameworks */,
 				0759E26316FC5D4200976E87 /* Products */,
 			);
@@ -140,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0759E26216FC5D4200976E87 /* Themes.app */,
+				07AF864E170AF56E00C25F76 /* themegen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				0759E26516FC5D4200976E87 /* Cocoa.framework */,
+				07AF864F170AF56E00C25F76 /* Foundation.framework */,
 				0759E26716FC5D4200976E87 /* Other Frameworks */,
 				55597DD1AF564BD9B12927EB /* libPods.a */,
 			);
@@ -303,6 +343,23 @@
 			path = "Create Window";
 			sourceTree = "<group>";
 		};
+		07AF8651170AF56E00C25F76 /* themegen */ = {
+			isa = PBXGroup;
+			children = (
+				07AF8665170B04D800C25F76 /* HomeBrew */,
+				07AF8652170AF56F00C25F76 /* main.m */,
+			);
+			path = themegen;
+			sourceTree = "<group>";
+		};
+		07AF8665170B04D800C25F76 /* HomeBrew */ = {
+			isa = PBXGroup;
+			children = (
+				07AF8666170B04F600C25F76 /* themegen.rb */,
+			);
+			path = HomeBrew;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,6 +380,23 @@
 			productName = Themes;
 			productReference = 0759E26216FC5D4200976E87 /* Themes.app */;
 			productType = "com.apple.product-type.application";
+		};
+		07AF864D170AF56E00C25F76 /* themegen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07AF8658170AF56F00C25F76 /* Build configuration list for PBXNativeTarget "themegen" */;
+			buildPhases = (
+				07AF864A170AF56E00C25F76 /* Sources */,
+				07AF864B170AF56E00C25F76 /* Frameworks */,
+				07AF864C170AF56E00C25F76 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = themegen;
+			productName = themegen;
+			productReference = 07AF864E170AF56E00C25F76 /* themegen */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -347,6 +421,7 @@
 			projectRoot = "";
 			targets = (
 				0759E26116FC5D4200976E87 /* Themes */,
+				07AF864D170AF56E00C25F76 /* themegen */,
 			);
 		};
 /* End PBXProject section */
@@ -416,6 +491,21 @@
 				07AF86281701DD5000C25F76 /* NSColor+ChessboardColor.m in Sources */,
 				07AF86331705E6AF00C25F76 /* IADocumentWindowController.m in Sources */,
 				07AF863A1705FD0600C25F76 /* IANewWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07AF864A170AF56E00C25F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AF8653170AF56F00C25F76 /* main.m in Sources */,
+				07AF865D170AF67900C25F76 /* CPTheme.m in Sources */,
+				07AF865E170AF67B00C25F76 /* CPColors.m in Sources */,
+				07AF865F170AF67E00C25F76 /* CPGradients.m in Sources */,
+				07AF8660170AF68200C25F76 /* CPShadows.m in Sources */,
+				07AF8661170AF68500C25F76 /* CPImages.m in Sources */,
+				07AF8662170AF68700C25F76 /* CPStrings.m in Sources */,
+				07AF8663170AF68A00C25F76 /* CPThemeItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +622,24 @@
 			};
 			name = Release;
 		};
+		07AF8659170AF56F00C25F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Themes/Themes-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07AF865A170AF56F00C25F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Themes/Themes-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +660,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		07AF8658170AF56F00C25F76 /* Build configuration list for PBXNativeTarget "themegen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07AF8659170AF56F00C25F76 /* Debug */,
+				07AF865A170AF56F00C25F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

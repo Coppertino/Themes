@@ -37,7 +37,7 @@
 			outputFiles = (
 				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).m",
 			);
-			script = "/Users/acrist/Library/Developer/Xcode/DerivedData/Themes-eqnxzquqgdtqatfphapkfbfwzexf/Build/Products/Debug/Themes.app/Contents/MacOS/Themes -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\"\n";
+			script = "/Users/acrist/Library/Developer/Xcode/DerivedData/Themes-eqnxzquqgdtqatfphapkfbfwzexf/Build/Products/Debug/themegen -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\" -exportTheme\n";
 		};
 /* End PBXBuildRule section */
 
@@ -271,7 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "for i in $(ls -1 $DERIVED_FILES_DIR |grep .tiff); do\ncp ${DERIVED_FILES_DIR}/$i $BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Contents/Resources/\ndone";
+			shellScript = "#for i in $(ls -1 $DERIVED_FILES_DIR |grep .tiff); do\n#cp ${DERIVED_FILES_DIR}/$i $BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Contents/Resources/\n#done";
 		};
 /* End PBXShellScriptBuildPhase section */
 
