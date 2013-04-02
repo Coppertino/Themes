@@ -48,6 +48,11 @@
     NSImage *selectedImage = [_contentController valueForKeyPath:@"selection.value"];
     if ([selectedImage name]) {
         selectedImage = [NSImage imageNamed:selectedImage.name];
+    } else if ([selectedImage isTemplate]) {
+        selectedImage = [[NSImage alloc] initWithData:[(NSPDFImageRep *)selectedImage.representations[0] PDFRepresentation]];
+        self.imageView.image = selectedImage;
+        self.retinaImageView.image = selectedImage;
+        return;
     } else {
 
         NSArray *reps = [selectedImage representations];
@@ -84,21 +89,27 @@
 
 - (IBAction)updateNormalImage:(id)sender {
     NSImage *image = [_contentController valueForKeyPath:@"selection.value"];
-    NSMutableArray *reps = [[image representations] mutableCopy];
-
-    NSImage *newImage = [[NSImage alloc] initWithSize:[sender image].size];
-    NSSize newImageSize = newImage.size;
-
-    [image.representations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([(NSImageRep *)obj pixelsWide] != (newImageSize.width  *2) ||
-            [(NSImageRep *)obj pixelsHigh] != (newImageSize.height *2)) {
-            [reps removeObject:obj];
-        }
-    }];
-
-    NSBitmapImageRep *newRep = [[sender image] representations][0];
-    [newImage addRepresentation:newRep];
-    [newImage addRepresentations:reps];
+    NSImage *newImage = image;
+    if (image.isTemplate) {
+//        newImage = 
+    } else {
+        NSMutableArray *reps = [[image representations] mutableCopy];
+        
+        newImage = [[NSImage alloc] initWithSize:[sender image].size];
+        NSSize newImageSize = newImage.size;
+        
+        [image.representations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([(NSImageRep *)obj pixelsWide] != (newImageSize.width  *2) ||
+                [(NSImageRep *)obj pixelsHigh] != (newImageSize.height *2)) {
+                [reps removeObject:obj];
+            }
+        }];
+        
+        NSBitmapImageRep *newRep = [[sender image] representations][0];
+        [newImage addRepresentation:newRep];
+        [newImage addRepresentations:reps];
+        
+    }
     
     [_contentController setValue:newImage forKeyPath:@"selection.value"];
 }
@@ -107,21 +118,27 @@
 
 - (IBAction)updateRetinaImage:(id)sender {
     NSImage *image = [_contentController valueForKeyPath:@"selection.value"];
-    NSSize imageSize = image.size;
-    NSMutableArray *reps = [[image representations] mutableCopy];
-    [image.representations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([(NSImageRep *)obj pixelsWide] != (imageSize.width  ) ||
-            [(NSImageRep *)obj pixelsHigh] != (imageSize.height)) {
-            [reps removeObject:obj];
-        }
-    }];
-    
-    NSBitmapImageRep *newRep = [[sender image] representations][0];
-    NSImage *newImage = [[NSImage alloc] initWithSize:image.size];
-    
-    [newImage addRepresentations:reps];
-    [newImage addRepresentation:newRep];
-    
+    NSImage *newImage = image;
+    if (image.isTemplate) {
+        
+    } else {
+        NSSize imageSize = image.size;
+        NSMutableArray *reps = [[image representations] mutableCopy];
+        [image.representations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([(NSImageRep *)obj pixelsWide] != (imageSize.width  ) ||
+                [(NSImageRep *)obj pixelsHigh] != (imageSize.height)) {
+                [reps removeObject:obj];
+            }
+        }];
+        
+        NSBitmapImageRep *newRep = [[sender image] representations][0];
+        newImage = [[NSImage alloc] initWithSize:image.size];
+        
+        [newImage addRepresentations:reps];
+        [newImage addRepresentation:newRep];
+        
+        
+    }
     [_contentController setValue:newImage forKeyPath:@"selection.value"];
 }
 

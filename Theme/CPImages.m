@@ -33,6 +33,8 @@
     NSImage *newImage = nil;
     if ([inImage name]) {
         newImage = [NSImage imageNamed:inImage.name];
+    } else if ([inImage isTemplate]) {
+        newImage = [[NSImage alloc] initWithData:[(NSPDFImageRep *)inImage.representations[0] PDFRepresentation]];
     } else {
         NSArray *reps = [inImage representations];
         newImage = [[NSImage alloc] initWithSize:inImage.size];

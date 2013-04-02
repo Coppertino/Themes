@@ -52,7 +52,6 @@
 		07AF8661170AF68500C25F76 /* CPImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2C816FC885700976E87 /* CPImages.m */; };
 		07AF8662170AF68700C25F76 /* CPStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759E2CB16FC886800976E87 /* CPStrings.m */; };
 		07AF8663170AF68A00C25F76 /* CPThemeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF85DD16FCCCF000C25F76 /* CPThemeItem.m */; };
-		3E968E172FE249CB86E55B1B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55597DD1AF564BD9B12927EB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0759E26616FC5D4200976E87 /* Cocoa.framework in Frameworks */,
-				3E968E172FE249CB86E55B1B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +368,6 @@
 				0759E25E16FC5D4200976E87 /* Sources */,
 				0759E25F16FC5D4200976E87 /* Frameworks */,
 				0759E26016FC5D4200976E87 /* Resources */,
-				A132768AA8C24F1BADDA0BB4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,23 +440,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A132768AA8C24F1BADDA0BB4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0759E25E16FC5D4200976E87 /* Sources */ = {
@@ -566,9 +546,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -593,8 +573,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -605,7 +585,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Themes/Themes-Prefix.pch";
 				INFOPLIST_FILE = "Themes/Themes-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -617,7 +599,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Themes/Themes-Prefix.pch";
 				INFOPLIST_FILE = "Themes/Themes-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
