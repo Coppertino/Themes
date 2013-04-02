@@ -12,3 +12,10 @@
 @interface CPColors : CPThemeItem
 
 @end
+
+
+@interface NSColor (NSConnection)
+
++ (NSColor *)remoteCopyOfColor:(NSColor *)color;
+
+@end

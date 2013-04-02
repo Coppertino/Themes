@@ -30,7 +30,7 @@ THE SOFTWARE.
   }
   
   s.author       = { "Coppertino Inc." => "dev@coppertino.com" }
-  s.source       = { :git => "https://github.com/Coppertino/Themes.git", :commit => "deceb09ae39683b30f06ceb2aa5d7755520e67c1" }
+  s.source       = { :git => "https://github.com/Coppertino/Themes.git", :branch => "master" }
   s.platform     = :osx, '10.7'
 
   s.source_files = 'Theme', 'Theme/*.{h,m}'

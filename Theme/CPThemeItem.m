@@ -48,7 +48,13 @@
         return _customValues[key];
     }
     
-    return [super valueForKey:key];
+    id obj = [super valueForKey:key];
+
+    if (!obj) {
+        obj = [self valueForUndefinedKey:key];
+    }
+    
+    return obj;
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key

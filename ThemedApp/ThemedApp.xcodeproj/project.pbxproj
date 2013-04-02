@@ -37,7 +37,7 @@
 			outputFiles = (
 				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).m",
 			);
-			script = "/Users/acrist/Library/Developer/Xcode/DerivedData/Themes-eqnxzquqgdtqatfphapkfbfwzexf/Build/Products/Debug/themegen -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\" -exportTheme\n";
+			script = "/usr/local/bin/themegen -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\" -exportTheme YES\n";
 		};
 /* End PBXBuildRule section */
 
@@ -206,7 +206,7 @@
 				0759E28A16FC7B3A00976E87 /* Sources */,
 				0759E28B16FC7B3A00976E87 /* Frameworks */,
 				0759E28C16FC7B3A00976E87 /* Resources */,
-				07AF86471709CB7300C25F76 /* ShellScript */,
+				07AF86471709CB7300C25F76 /* Export Resources */,
 			);
 			buildRules = (
 				07AF863E1709BBA100C25F76 /* PBXBuildRule */,
@@ -260,18 +260,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07AF86471709CB7300C25F76 /* ShellScript */ = {
+		07AF86471709CB7300C25F76 /* Export Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Export Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#for i in $(ls -1 $DERIVED_FILES_DIR |grep .tiff); do\n#cp ${DERIVED_FILES_DIR}/$i $BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Contents/Resources/\n#done";
+			shellScript = "/usr/local/bin/themegen -theme \"$INPUT_FILE_PATH\" -output \"$DERIVED_FILES_DIR\" -exportResources YES -useTIFF YES";
 		};
 /* End PBXShellScriptBuildPhase section */
 

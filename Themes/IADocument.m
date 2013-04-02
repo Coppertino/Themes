@@ -84,10 +84,13 @@
         wc.action = ^(BOOL haveApp, NSString *appId)
         {
             self.remoteTheme = (CPTheme *)[NSConnection rootProxyForConnectionWithRegisteredName:appId host:nil];
+            NSString *currentTheme = [_remoteTheme themeName];
             self.contentController = [[NSDictionaryController alloc] initWithContent:_remoteTheme.dictionaryRepresentation];
+            [self.contentController setSelectionIndex:[[_contentController valueForKeyPath:@"arrangedObjects.key"] indexOfObject:currentTheme]];
 
             openDocBlock();
             _application = appId;
+            _classes = [_remoteTheme classes];
             [self.windowControllers[1] setValue:[weakWc.contentController valueForKeyPath:@"selection.value"] forKey:@"application"];
         };
         
@@ -119,13 +122,27 @@
                     obj = [NSGradient remoteCopyOfGradient:obj];
                 else if ([obj isKindOfClass:[NSImage class]])
                     obj = [NSImage remoteCopyOfImage:obj];
-                
-                contentDict[themeKey][propName][key] = [NSKeyedArchiver archivedDataWithRootObject:obj];
+                else if ([obj isKindOfClass:[NSColor class]]){
+                    obj = [NSColor remoteCopyOfColor:obj];
+                }
+                NSObject *archived = [NSKeyedArchiver archivedDataWithRootObject:obj];
+                if (!archived) {
+                    NSLog(@"FFFFYCCC: %@", key);
+                }
+                contentDict[themeKey][propName][key] = archived;
             }];
         }];
     }];
     
-    return [NSPropertyListSerialization dataFromPropertyList:@{_application:contentDict, @"classes" : _classes } format:NSPropertyListXMLFormat_v1_0 errorDescription:nil];
+    NSDictionary *saveDict = @{
+                               _application:contentDict,
+                               @"classes" : _classes,
+                               @"selected" : [_contentController valueForKeyPath:@"selection.key"]
+                               };
+    
+    return [NSPropertyListSerialization dataFromPropertyList:saveDict
+                                                      format:NSPropertyListXMLFormat_v1_0
+                                            errorDescription:nil];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
@@ -145,14 +162,70 @@
             NSDictionary *props = obj;
             content[themeName][propName] = [NSMutableDictionary dictionary];
             [props enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                content[themeName][propName][key] = [[NSKeyedUnarchiver unarchiveObjectWithData:obj] copy];
+                id unarchived = [[NSKeyedUnarchiver unarchiveObjectWithData:obj] copy];
+                if (!unarchived) {
+                    NSLog(@"fail to load %@.%@.%@", themeName, propName, key);
+                } else
+                    content[themeName][propName][key] = unarchived;
             }];
         }];
     }];
     
     
     self.contentController = [[NSDictionaryController alloc] initWithContent:content];
+    [self.contentController setSelectionIndex:[[_contentController valueForKeyPath:@"arrangedObjects.key"] indexOfObject:contentDict[@"selected"]]];
+
     return YES;
+}
+
+- (void)synchronizeWithApplication;
+{
+    self.classes = [_remoteTheme classes];
+    
+    // Add new items
+    NSDictionary *newThemeContent = [_remoteTheme dictionaryRepresentation];
+    
+    [newThemeContent enumerateKeysAndObjectsUsingBlock:^(id themeName, id theme, BOOL *stop) {
+        // Add new theme
+        if (![[self.contentController.content allKeys] containsObject:themeName]) {
+            self.contentController.content[themeName] = theme;
+        } else {
+            // Synchronize content
+            [theme enumerateKeysAndObjectsUsingBlock:^(id propName, id prop, BOOL *stop) {
+                [prop enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                    if (![[self.contentController.content[themeName][propName] allKeys]  containsObject:key]) {
+                        NSLog(@"adding new: %@", key);
+                        self.contentController.content[themeName][propName][key] = obj;
+                    }
+                }];
+            }];
+        }
+    }];
+    
+    // Remove non exists items
+    NSMutableArray *keyPaths = [NSMutableArray array];
+    [self.contentController.content enumerateKeysAndObjectsUsingBlock:^(id themeName, id theme, BOOL *stop) {
+        if ([[newThemeContent allKeys] containsObject:themeName]) {
+            [theme enumerateKeysAndObjectsUsingBlock:^(id propName, id prop, BOOL *stop) {
+                [prop enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                    if (![[newThemeContent[themeName][propName] allKeys] containsObject:key]) {
+                        [keyPaths addObject:[NSString stringWithFormat:@"%@.%@.%@", themeName, propName, key]];
+                    } else if ([_remoteTheme.themeName isEqualToString:themeName]) {
+                        // Update remote with current valuses
+                        [_remoteTheme setValue:obj forKeyPath:[NSString stringWithFormat:@"%@.%@",  propName, key]];
+                    }
+                }];
+            }];
+        } else {
+            // remove whole theme
+            [keyPaths addObject:themeName];
+        }
+    }];
+    
+    [keyPaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@"needs to remove: %@", obj);
+    }];
+    
 }
 
 #pragma mark - Helpers
@@ -177,7 +250,7 @@
         [[self windowController] setValue:aNetService.name forKey:@"application"];
 
         self.remoteTheme = (CPTheme *)[NSConnection rootProxyForConnectionWithRegisteredName:aNetService.name host:nil];
-        self.classes = [_remoteTheme classes];
+        [self synchronizeWithApplication];
     }
 
     [_services addObject:aNetService];

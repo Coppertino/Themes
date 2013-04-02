@@ -31,11 +31,8 @@
 + (NSImage *)remoteCopyOfImage:(NSImage *)inImage
 {
     NSImage *newImage = nil;
-    if ([inImage name]) {
-        newImage = [NSImage imageNamed:inImage.name];
-    } else if ([inImage isTemplate]) {
-        newImage = [[NSImage alloc] initWithData:[(NSPDFImageRep *)inImage.representations[0] PDFRepresentation]];
-    } else {
+    if ([inImage.representations[0] isKindOfClass:[NSBitmapImageRep class]])
+    {
         NSArray *reps = [inImage representations];
         newImage = [[NSImage alloc] initWithSize:inImage.size];
         [reps enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -44,6 +41,17 @@
                 [newImage addRepresentation:newRep];
             }
         }];
+        if (inImage.name)
+            newImage.name = inImage.name;
+        
+    } else if ([inImage isTemplate] && [inImage.representations[0] isKindOfClass:[NSPDFImageRep class]]) {
+        newImage = [[NSImage alloc] initWithData:[(NSPDFImageRep *)inImage.representations[0] PDFRepresentation]];
+        [newImage setTemplate:YES];
+        if (inImage.name)
+            newImage.name = inImage.name;
+        
+    } else if (inImage.name) {
+        newImage = [NSImage imageNamed:inImage.name];
     }
     
     return newImage;
