@@ -20,16 +20,14 @@
 
 + (NSColor *)remoteCopyOfColor:(NSColor *)color
 {
-    CGFloat red = 0, green = 0, blue = 0, alpha = 0;
-    
-    if ([color.colorSpaceName isEqualToString:NSCalibratedRGBColorSpace] || [color.colorSpaceName isEqualToString:NSDeviceRGBColorSpace]) {
-        [color getRed:&red green:&green blue:&blue alpha:&alpha];
-    } else if ([color.colorSpaceName isEqualToString:NSCalibratedWhiteColorSpace] || [color.colorSpaceName isEqualToString:NSDeviceWhiteColorSpace]) {
-        [color getWhite:&red alpha:&alpha];
-        green = blue = red;
-    }
-    
-    return [NSColor colorWithDeviceRed:red green:green blue:blue alpha:alpha];
+    NSColorSpace *colorSpace = [color colorSpace];
+    color = [color colorUsingColorSpace:colorSpace];
+
+    NSInteger count = [color numberOfComponents];
+    CGFloat components[count];
+    [color getComponents:(CGFloat *)components];
+   
+    return [NSColor colorWithColorSpace:[NSColorSpace deviceRGBColorSpace] components:components count:count];
 }
 
 @end
