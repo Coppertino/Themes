@@ -30,13 +30,13 @@
 
 
 static NSString *stringForKeyWithColor(NSString *key, NSColor *color) {
+    color = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
     return [NSString stringWithFormat:@"- (NSColor *)%@ { return [NSColor colorWithDeviceRed:%f green:%f blue:%f alpha:%f]; }\n",
             key,
             color.redComponent, color.greenComponent, color.blueComponent, color.alphaComponent];
 };
 
 static NSString *stringForKeyWithGradient(NSString *key, NSGradient *gradient) {
-    
     NSInteger			aNumberOfStops = [gradient numberOfColorStops];
 	NSMutableArray *	aColorList = [NSMutableArray array];
 	CGFloat				aLocationList[aNumberOfStops];
@@ -47,7 +47,7 @@ static NSString *stringForKeyWithGradient(NSString *key, NSGradient *gradient) {
 		NSColor *	aStopColor = nil;
 		CGFloat		aLocation = 0;
 		[gradient getColor:&aStopColor location:&aLocation atIndex:i];
-		
+        aStopColor =[aStopColor colorUsingColorSpaceName:NSDeviceRGBColorSpace];
 		[aColorList addObject:[NSColor colorWithDeviceRed:aStopColor.redComponent green:aStopColor.greenComponent blue:aStopColor.blueComponent alpha:aStopColor.alphaComponent]];
 		aLocationList[i] = aLocation;
 	}
@@ -88,24 +88,43 @@ static NSString *stringForImageWithKeyforPath(NSString *key, NSImage *image, NSS
 {
     if (!image)
         return [NSString stringWithFormat:@"- (NSImage *)%@ { return nil; }\n", key];
-    
-    if (image.name) {
+    if (image.name && ![image.representations[0] isKindOfClass:[NSBitmapImageRep class]]) {
         return [NSString stringWithFormat:@"- (NSImage *)%@; { return [NSImage imageNamed:@\"%@\"]; }\n", key, image.name];
     }
+    
+    NSString *imageFile = [key stringByAppendingString:suffix ? suffix : @""];
+    if ([image.representations[0] isKindOfClass:[NSPDFImageRep class]]) {
+        imageFile = [imageFile stringByReplacingOccurrencesOfString:@"template"
+                                             withString:@""
+                                                options:NSCaseInsensitiveSearch
+                                                  range:NSMakeRange(0, key.length)];
+        imageFile = [imageFile stringByAppendingString:@"Template"];
+
+    }
+    
    
-    return [NSString stringWithFormat:@"- (NSImage *)%@; { return [NSImage imageNamed:@\"%@\"]; }\n", key, [key stringByAppendingString:suffix ? suffix : @""]];
+    return [NSString stringWithFormat:@"- (NSImage *)%@; { return [NSImage imageNamed:@\"%@\"]; }\n", key, imageFile];
 }
 
 static void exportImageForKeyToPathAsTIFF(NSImage *image, NSString *key, NSString *path, NSString *suffix, BOOL isTIFF)
 {
-    if (!image || image.name)
+    if (!image)
         return;
-    
-    if (isTIFF) {
-        NSString *fileName = key;
-        if (suffix) {
-            fileName = [fileName stringByAppendingString:suffix];
-        }
+    NSString *fileName = key;
+    if (suffix) {
+        fileName = [fileName stringByAppendingString:suffix];
+    }
+
+    if ([image.representations[0] isKindOfClass:[NSPDFImageRep class]]) {
+        fileName = [fileName stringByReplacingOccurrencesOfString:@"template"
+                                                       withString:@""
+                                                          options:NSCaseInsensitiveSearch
+                                                            range:NSMakeRange(0, fileName.length)];
+        fileName = [fileName stringByAppendingString:@"Template"];
+        fileName = [fileName stringByAppendingPathExtension:@"pdf"];
+        [[image.representations[0] PDFRepresentation] writeToFile:[path stringByAppendingPathComponent:fileName] atomically:YES];
+
+    } else if (isTIFF) {
         fileName = [fileName stringByAppendingPathExtension:@"tiff"];
         [[image TIFFRepresentation] writeToFile:[path stringByAppendingPathComponent:fileName] atomically:YES];
         
@@ -251,10 +270,6 @@ int main(int argc, const char * argv[])
             }];
             
 
-            
-            
-            
-            
             if ([[NSUserDefaults standardUserDefaults] valueForKey:@"exportResources"])
             {
                 exportResourcesFromContentToPath(dict, classes, outputDir);

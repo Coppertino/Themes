@@ -11,7 +11,7 @@
 @implementation CPColors
 - (id)valueForUndefinedKey:(NSString *)key
 {
-    return [NSColor clearColor];
+    return [[NSColor clearColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace];
 }
 
 @end
@@ -20,14 +20,23 @@
 
 + (NSColor *)remoteCopyOfColor:(NSColor *)color
 {
-    NSColorSpace *colorSpace = [color colorSpace];
-    color = [color colorUsingColorSpace:colorSpace];
-
     NSInteger count = [color numberOfComponents];
     CGFloat components[count];
     [color getComponents:(CGFloat *)components];
-   
-    return [NSColor colorWithColorSpace:[NSColorSpace deviceRGBColorSpace] components:components count:count];
+    NSString *colorSpaceName = [color colorSpaceName];
+    NSColorSpace *colorSpace = nil;
+    
+    if (colorSpaceName == NSDeviceRGBColorSpace || colorSpaceName == NSCustomColorSpace)
+        colorSpace = [NSColorSpace deviceRGBColorSpace];
+    else if (colorSpaceName == NSCalibratedRGBColorSpace)
+        colorSpace = [NSColorSpace genericRGBColorSpace];
+    else if (colorSpaceName == NSDeviceWhiteColorSpace)
+        colorSpace = [NSColorSpace deviceGrayColorSpace];
+    else if (colorSpaceName == NSCalibratedWhiteColorSpace)
+        colorSpace = [NSColorSpace genericGrayColorSpace];
+    
+
+    return [NSColor colorWithColorSpace:colorSpace components:components count:count];
 }
 
 @end

@@ -41,7 +41,7 @@
 		NSColor *	aStopColor = nil;
 		CGFloat		aLocation = 0;
 		[inGradient getColor:&aStopColor location:&aLocation atIndex:i];
-        aStopColor = [NSColor remoteCopyOfColor:aStopColor];
+        aStopColor = [[NSColor remoteCopyOfColor:aStopColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace];
 		[aColorList addObject:[NSColor colorWithDeviceRed:aStopColor.redComponent green:aStopColor.greenComponent blue:aStopColor.blueComponent alpha:aStopColor.alphaComponent]];
 		aLocationList[i] = aLocation;
 	}
